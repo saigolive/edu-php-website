@@ -1,6 +1,5 @@
 FROM devopsedu/webapp
-RUN yum update && \
-    yum install -y php php-cli php-fpm php-mysql
+WORKDIR /var/www/html
 COPY projCert /var/www/html
 RUN chown -R www-data:www-data /var/www/html
 EXPOSE 80
